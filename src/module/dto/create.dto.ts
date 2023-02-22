@@ -1,6 +1,6 @@
 import { Transform } from "class-transformer";
 import { IsString } from "class-validator";
-import { IsNotEmpty, IsNumber, IsOptional, Length } from "class-validator/types/decorator/decorators";
+import { IsNotEmpty, IsNumber, IsOptional, Length } from 'class-validator';
 
 export class CreateDto {
     @Length(3)
