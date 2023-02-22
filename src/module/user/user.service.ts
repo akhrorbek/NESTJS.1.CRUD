@@ -36,5 +36,16 @@ export class UserService {
     }
 
 
+    deleteUser(id:number):void {
+        const findIndex = this.userList.findIndex(e => e.id == id)
+
+        if(findIndex < 0 ) {
+            throw new NotFoundException()
+        }
+
+        this.userList.splice(findIndex, 1)
+    }
+
+
 
 }
